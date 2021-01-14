@@ -1,0 +1,295 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: url("../src/img/back.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 320px;
+    height: 410px;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, .6);
+    overflow: hidden;
+    border-radius: 20px;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+
+.container.big-container {
+    height: 500px;
+}
+
+/* кнопки переключения */
+
+.buttons {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 20px;
+    transition: all .3s ease;
+    margin-bottom: 30px;
+    box-shadow: 0 0 30px rgb(72,173,255);
+}
+
+.buttons:hover {
+    transition: all .3s ease;
+}
+
+.btn {
+    width: 50%;
+    height: 100%;
+    background: unset;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.buttons .btn:focus {
+    outline: none;
+}
+
+.select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background:linear-gradient(rgb(72,173,255), rgb(201,47,225) 140%);
+    z-index: -1;
+    border-radius: 20px;
+    transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
+}
+
+.selectReg {
+    left: 100%;
+    transform: translateX(-100%);
+    color: black;
+}
+
+.selectLog {
+    left: 0;
+    transform: translateX(0);
+    color: black;
+}
+
+/* формы */
+
+.forms {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 200%;
+    left: 0;
+    top: 0;
+    transition: all .4s ease-in-out;
+}
+
+form {
+    width: 50%;
+    text-align: center;
+}
+
+.formLog {
+    left: 0;
+}
+
+.formReg {
+    left: calc(-100% - 30px);
+}
+
+.reg {
+    position: absolute;
+    left: calc(50% + 30px);
+}
+
+/* инпуты */
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: unset;
+    border-radius: 0;
+    /* font-size: 16px; */
+    color: white;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+
+.decor_input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.decor_input input {
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* label вверх */
+label {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: rgba(218, 216, 216, 0.517);
+    z-index: -1;
+    transition: all .3s ease;
+}
+
+input[type='file']~label {
+    bottom: 30px;
+}
+
+input:focus~label,
+input.text~label {
+    bottom: 30px;
+    font-size: 14px;
+    color: aqua;
+}
+
+/* поддчеркивание инпута */
+.decor_input span {
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: aqua;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+}
+
+input:focus~span,
+input.text~span {
+    width: 100%;
+}
+
+/* кнопка отправки */
+
+.sub-btn {
+    text-align: center;
+    width: 80%;
+    padding: 12px;
+    background:linear-gradient(rgb(72,173,255), rgb(201,47,225) 140%);
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+.sub-btn:focus {
+    outline: none;
+}
+/* показать/скрыть пароль */
+
+.view-psw {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 25px;
+    height: 25px;
+    background: url("../src/img/svg/no-visibility.svg");
+}
+
+.view-psw.view {
+    background: url("../src/img/svg/visibility.svg");
+}
+
+.view-psw:hover {
+    cursor: pointer;
+}
+
+/* загрузка файла */
+
+.result {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* checkbox */
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.sub-checkbox {
+    width: 22px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease;
+}
+
+.for-checkbox {
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    overflow: hidden;
+    width: 100%;
+    z-index: 2;
+    padding-left: 30px;
+}
+
+.for-checkbox:hover {
+    cursor: pointer;
+}
+
+.for-checkbox a {
+    color: rgb(72,173,255);
+}
+
+input[type="checkbox"]:checked~div {
+    background-color: unset;
+    border-right: 2px solid rgb(72,173,255);
+    border-bottom: 2px solid rgb(72,173,255);
+    transform: rotate(45deg);
+    top: 3px;
+}

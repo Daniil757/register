@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+    <div class="wrapper">
+        <div class="container">
+            <div class="buttons">
+                <button id="btn-login" class="btn">Log in</button>
+                <button id="btn-reg" class="btn">Registration</button>
+                <div class="select selectLog" id="select"></div>
+            </div>
+
+            <div class="forms formLog" id="forms">
+
+                <form id="form-login" class="login">
+                    <div class="decor_input">
+                        <input type="text" name="name-log" id="name-log">
+                        <label class="label">Введите имя</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="decor_input">
+                        <input type="password" name="psw-log" id="psw-log">
+                        <p class="view-psw"></p>
+                        <label class="label">Введите пароль</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="decor_input">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <div class="sub-checkbox"></div>
+                        <label for="checkbox" class="for-checkbox">Я принимаю <a href="#">условия пользования</a></label>
+                    </div>
+                    <button type="submit" id="sub-log" class="sub-btn">Log in</button>
+                </form>
+
+                <form id="form-reg" class="reg">
+                    <div class="decor_input">
+                        <input type="text" name="first-name-reg" id="first-name-reg">
+                        <label class="label">Введите имя</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="decor_input">
+                        <input type="text" name="name-reg" id="name-reg">
+                        <label class="label">Введите логин</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="decor_input">
+                        <input type="file" name="avatar" id="avatar">
+                        <label class="label">Выберите аватар</label>
+                        <span class="line"></span>
+                        <label for="avatar" id="result" class="result"></label>
+                    </div>
+                    <div class="decor_input">
+                        <input type="password" name="psw-reg" id="psw-reg">
+                        <p class="view-psw"></p>
+                        <label class="label">Введите пароль</label>
+                        <span class="line"></span>
+                    </div>
+                    <div class="decor_input">
+                        <input type="password" name="psw-cof-reg" id="psw-cof-reg">
+                        <p class="view-psw"></p>
+                        <label class="label">Повторите пароль</label>
+                        <span class="line"></span>
+                    </div>
+                    <button type="submit" id="sub-reg" class="sub-btn">Register</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
